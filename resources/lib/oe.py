@@ -26,8 +26,8 @@ import log
 import os_tools
 
 
-__author__ = 'LibreELEC'
-__scriptid__ = 'service.libreelec.settings'
+__author__ = 'EddictwareELEC'
+__scriptid__ = 'service.eddictwareelec.settings'
 __addon__ = xbmcaddon.Addon(id=__scriptid__)
 __cwd__ = __addon__.getAddonInfo('path')
 __oe__ = sys.modules[globals()['__name__']]
@@ -69,12 +69,12 @@ try:
     importlib.reload(sys)
     # sys.setdefaultencoding(encoding)
 except Exception as e:
-    log.log(f'## LibreELEC Addon ## oe:encoding: ERROR: ({repr(e)})', log.ERROR)
+    log.log(f'## EddictwareELEC Addon ## oe:encoding: ERROR: ({repr(e)})', log.ERROR)
 
 ## load oeSettings modules
 
 import oeWindows
-log.log(f"## LibreELEC Addon ## {str(__addon__.getAddonInfo('version'))}", log.INFO)
+log.log(f"## EddictwareELEC Addon ## {str(__addon__.getAddonInfo('version'))}", log.INFO)
 
 class PINStorage:
     def __init__(self, module='system', prefix='pinlock', maxAttempts=4, delay=300):
@@ -211,7 +211,7 @@ class ProgressDialog:
     def getSpeed(self):
         return self.speed
 
-    def open(self, heading='LibreELEC', line1='', line2='', line3=''):
+    def open(self, heading='EddictwareELEC', line1='', line2='', line3=''):
         self.dialog = xbmcgui.DialogProgress()
         self.dialog.create(heading, f'{line1}\n{line2}\n{line3}')
         self.reset()
@@ -259,7 +259,7 @@ class ProgressDialog:
 
 
 def _(code):
-    wizardComp = read_setting('libreelec', 'wizard_completed')
+    wizardComp = read_setting('eddictwareelec', 'wizard_completed')
     if wizardComp == "True":
         codeNew = __addon__.getLocalizedString(code)
     else:
@@ -471,7 +471,7 @@ def stop_service():
         module = dictModules[strModule]
         if hasattr(module, 'stop_service') and module.ENABLED:
             module.stop_service()
-    log.log('## LibreELEC Addon ## STOP SERVICE DONE !', log.INFO)
+    log.log('## EddictwareELEC Addon ## STOP SERVICE DONE !', log.INFO)
 
 
 @log.log_function()
@@ -545,7 +545,7 @@ def load_config():
         config_text = ''
     if config_text == '':
         xml_conf = minidom.Document()
-        xml_main = xml_conf.createElement('libreelec')
+        xml_main = xml_conf.createElement('eddictwareelec')
         xml_conf.appendChild(xml_main)
         xml_sub = xml_conf.createElement('addon_config')
         xml_main.appendChild(xml_sub)
@@ -624,7 +624,7 @@ def write_setting(module, setting, value, main_node='settings'):
     xml_conf = load_config()
     xml_settings = xml_conf.getElementsByTagName(main_node)
     if len(xml_settings) == 0:
-        for xml_main in xml_conf.getElementsByTagName('libreelec'):
+        for xml_main in xml_conf.getElementsByTagName('eddictwareelec'):
             xml_sub = xml_conf.createElement(main_node)
             xml_main.appendChild(xml_sub)
             xml_settings = xml_conf.getElementsByTagName(main_node)
@@ -690,7 +690,7 @@ def split_dialog_text(text):
 
 def reboot_counter(seconds=10, title=' '):
     reboot_dlg = xbmcgui.DialogProgress()
-    reboot_dlg.create(f'LibreELEC {title}', ' ')
+    reboot_dlg.create(f'EddictwareELEC {title}', ' ')
     reboot_dlg.update(0)
     wait_time = seconds
     while seconds >= 0 and not (reboot_dlg.iscanceled() or xbmcm.abortRequested()):
@@ -821,9 +821,9 @@ BOOT_STATUS = load_file('/storage/.config/boot.status')
 ############################################################################################
 
 try:
-    configFile = f'{XBMC_USER_HOME}/userdata/addon_data/service.libreelec.settings/oe_settings.xml'
-    if not os.path.exists(f'{XBMC_USER_HOME}/userdata/addon_data/service.libreelec.settings'):
-        os.makedirs(f'{XBMC_USER_HOME}/userdata/addon_data/service.libreelec.settings')
+    configFile = f'{XBMC_USER_HOME}/userdata/addon_data/service.eddictwareelec.settings/oe_settings.xml'
+    if not os.path.exists(f'{XBMC_USER_HOME}/userdata/addon_data/service.eddictwareelec.settings'):
+        os.makedirs(f'{XBMC_USER_HOME}/userdata/addon_data/service.eddictwareelec.settings')
     if not os.path.exists(f'{CONFIG_CACHE}/services'):
         os.makedirs(f'{CONFIG_CACHE}/services')
 except:

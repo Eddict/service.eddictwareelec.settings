@@ -561,7 +561,7 @@ class system(modules.Module):
                     log.log('Unable to determine free space available for backup.', log.DEBUG)
                     pass
                 self.backup_dlg = xbmcgui.DialogProgress()
-                self.backup_dlg.create('LibreELEC', oe._(32375))
+                self.backup_dlg.create('EddictwareELEC', oe._(32375))
                 if not os.path.exists(self.BACKUP_DESTINATION):
                     os.makedirs(self.BACKUP_DESTINATION)
                 self.backup_file = f'{hostname.get_hostname()}-{oe.timestamp()}.tar'

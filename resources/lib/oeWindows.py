@@ -16,7 +16,7 @@ import oe
 
 xbmcDialog = xbmcgui.Dialog()
 
-__scriptid__ = 'service.libreelec.settings'
+__scriptid__ = 'service.eddictwareelec.settings'
 __addon__ = xbmcaddon.Addon(id=__scriptid__)
 __cwd__ = __addon__.getAddonInfo('path')
 
@@ -659,7 +659,7 @@ class wizard(xbmcgui.WindowXMLDialog):
                     xbmc.executebuiltin(f'InstallAddon({lang_new})')
                 oe.xbmcm.waitForAbort(0.5)
                 xbmc.executebuiltin('SendClick(10100,11)')
-                oe.write_setting('libreelec', 'wizard_completed', 'True')
+                oe.write_setting('eddictwareelec', 'wizard_completed', 'True')
                 self.visible = False
                 self.close()
                 if lang_new:
