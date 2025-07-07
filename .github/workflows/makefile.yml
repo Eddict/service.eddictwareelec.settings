@@ -17,10 +17,10 @@ jobs:
     # - name: configure
     #   run: ./configure
 
-    - name: make all
-      run: make all
+    # - name: make all
+    #   run: make all
 
-    - name: make addon
+    - name: Create and Zip addon
       run: make addon
 
     # - name: Run check
