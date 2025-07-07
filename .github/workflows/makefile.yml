@@ -14,17 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    # - name: configure
-    #   run: ./configure
-
-    # - name: make all
-    #   run: make all
-
     - name: Create and Zip addon
       run: make addon
 
-    # - name: Run check
-    #   run: make check
-
-    # - name: Run distcheck
-    #   run: make distcheck
+    - name: Upload Zip file
+      # if: steps.image-path.outputs.EE_image_pathfilename != ''
+      uses: actions/upload-artifact@v4
+      with:
+        name: "service.eddictwareelec.settings.zip"
+        path: "build/service.eddictwareelec.settings-0.0.0.zip"
