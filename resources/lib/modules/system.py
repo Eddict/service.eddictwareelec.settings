@@ -28,7 +28,7 @@ class system(modules.Module):
     ENABLED = False
     KERNEL_CMD = None
     XBMC_RESET_FILE = None
-    LIBREELEC_RESET_FILE = None
+    EDDICTWAREELEC_RESET_FILE = None
     KEYBOARD_INFO = None
     UDEV_KEYBOARD_INFO = None
     NOX_KEYBOARD_INFO = None
@@ -512,7 +512,7 @@ class system(modules.Module):
     @log.log_function()
     def reset_hard(self, listItem=None):
         if self.ask_sure_reset('Hard') == 1:
-            open(self.LIBREELEC_RESET_FILE, 'a').close()
+            open(self.EDDICTWAREELEC_RESET_FILE, 'a').close()
             oe.winOeMain.close()
             oe.xbmcm.waitForAbort(1)
             os_tools.execute('/usr/bin/systemctl --no-block reboot')

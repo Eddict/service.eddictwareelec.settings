@@ -17,9 +17,9 @@ import urllib.request
 import urllib.parse
 from xml.dom import minidom
 
-import xbmc
-import xbmcaddon
-import xbmcgui
+import xbmc # type: ignore[reportMissingImports]
+import xbmcaddon # type: ignore[reportMissingImports]
+import xbmcgui # type: ignore[reportMissingImports]
 
 import defaults
 import log
@@ -477,9 +477,9 @@ def stop_service():
 @log.log_function()
 def openWizard():
     global winOeMain, __cwd__, __oe__
-    winOeMain = oeWindows.wizard('service-LibreELEC-Settings-wizard.xml', __cwd__, 'Default', oeMain=__oe__)
+    winOeMain = oeWindows.wizard('service-EddictwareELEC-Settings-wizard.xml', __cwd__, 'Default', oeMain=__oe__)
     winOeMain.doModal()
-    winOeMain = oeWindows.mainWindow('service-LibreELEC-Settings-mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)  # None
+    winOeMain = oeWindows.mainWindow('service-EddictwareELEC-Settings-mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)  # None
 
 
 @log.log_function()
@@ -517,7 +517,7 @@ def openConfigurationWindow():
             return
 
     if match == True:
-        winOeMain = oeWindows.mainWindow('service-LibreELEC-Settings-mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)
+        winOeMain = oeWindows.mainWindow('service-EddictwareELEC-Settings-mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)
         winOeMain.doModal()
         for strModule in dictModules:
             dictModules[strModule].exit()
@@ -810,7 +810,7 @@ XBMC_USER_HOME = defaults.XBMC_USER_HOME
 CONFIG_CACHE = defaults.CONFIG_CACHE
 USER_CONFIG = defaults.USER_CONFIG
 TEMP = f'{XBMC_USER_HOME}/temp/'
-winOeMain = oeWindows.mainWindow('service-LibreELEC-Settings-mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)
+winOeMain = oeWindows.mainWindow('service-EddictwareELEC-Settings-mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)
 if os.path.exists('/etc/machine-id'):
     SYSTEMID = load_file('/etc/machine-id')
 else:

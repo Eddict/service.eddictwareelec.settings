@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-08-06 11:14+0000\n"
@@ -1051,7 +1051,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr ""
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr ""
 
 msgctxt "#32395"

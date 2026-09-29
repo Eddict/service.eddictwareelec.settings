@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
@@ -1052,7 +1052,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** SIGURAN NAČIN! ** SIGURAN NAČIN! ** SIGURAN NAČIN! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "@DISTRONAME@ je privremeno pokrenut u sigurnom načinu uslijed stalnih Kodi rušenja.[CR][CR]Sada može istražiti uzrok rušenja ssh ili Samba omogućavanjem.[CR][CR]Vašoj izvornoj Kodi instalaciji može se pristupiti putem \"/storage/.kodi.FAILED\" i Samba \"Kodi-Failed\" dijeljenjem.[CR][CR]Ponovno pokretanje će vas vratiti u vašu izvornu Kodi instalaciju.[CR][CR]Idite na https://forum.libreelec.tv ako vam je potrebna dodatna pomoć. Pri podnesku problema na forumu uključite poveznicu na vaš zapis rušenja koji možete vidjeti klikom na mogućnost zapisa rušenja u Postavke > LibreELEC > Sustav > Pošalji zapis."
 
 msgctxt "#32395"

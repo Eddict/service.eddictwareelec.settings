@@ -6,9 +6,9 @@
 import re
 from threading import Thread
 
-import xbmc
-import xbmcgui
-import xbmcaddon
+import xbmc # type: ignore[reportMissingImports]
+import xbmcgui # type: ignore[reportMissingImports]
+import xbmcaddon # type: ignore[reportMissingImports]
 
 import defaults
 import log
@@ -277,19 +277,19 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     selectedItem.setProperty('value', xbmcKeyboard.getText())
             elif strTyp == 'file':
                 xbmcDialog = xbmcgui.Dialog()
-                returnValue = xbmcDialog.browse(1, 'LibreELEC.tv', 'files', '', False, False, '/')
+                returnValue = xbmcDialog.browse(1, 'EddictwareELEC', 'files', '', False, False, '/')
                 if returnValue != '' and returnValue != '/':
                     selectedItem.setProperty('value', str(returnValue))
             elif strTyp == 'folder':
                 xbmcDialog = xbmcgui.Dialog()
-                returnValue = xbmcDialog.browse(0, 'LibreELEC.tv', 'files', '', False, False, '/storage')
+                returnValue = xbmcDialog.browse(0, 'EddictwareELEC', 'files', '', False, False, '/storage')
                 if returnValue != '' and returnValue != '/':
                     selectedItem.setProperty('value', str(returnValue))
             elif strTyp == 'ip':
                 if strValue == '':
                     strValue = '0.0.0.0'
                 xbmcDialog = xbmcgui.Dialog()
-                returnValue = xbmcDialog.numeric(3, 'LibreELEC.tv', strValue)
+                returnValue = xbmcDialog.numeric(3, 'EddictwareELEC', strValue)
                 if returnValue != '':
                     if returnValue == '0.0.0.0':
                         selectedItem.setProperty('value', '')
@@ -299,7 +299,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 if strValue == 'None' or strValue == '':
                     strValue = '0'
                 xbmcDialog = xbmcgui.Dialog()
-                returnValue = xbmcDialog.numeric(0, 'LibreELEC.tv', strValue)
+                returnValue = xbmcDialog.numeric(0, 'EddictwareELEC', strValue)
                 if returnValue != '':
                     selectedItem.setProperty('value', returnValue)
             elif strTyp == 'bool':

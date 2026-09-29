@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 # Translators:
 # aMvEL2 <jthattemaker@gmail.com>, 2016
 # David Vukovic <davu@kodi.tv>, 2019
@@ -10,7 +10,7 @@
 # Namerp, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: LibreELEC Settings Add-on\n"
+"Project-Id-Version: EddictwareELEC Settings Add-on\n"
 "PO-Revision-Date: 2021-12-14 06:26+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/nb_no/>\n"
@@ -1058,7 +1058,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** SIKKERHETSMODUS! ** SIKKERHETSMODUS! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "@DISTRONAME@ har midlertidig startet i sikker modus på grunn av gjentatte Kodi-sammenbrudd.[CR][CR]Du kan nå undersøke årsaken til sammenbrudd ved å aktivere ssh eller Samba.[CR][CR]Din originale Kodi-installasjon kan nås via \"/storage/.kodi.FAILED\" og Samba \"Kodi-Failed\" -delen.[CR][CR]Rebooting vil returnere til din originale Kodi-installasjon.[CR][CR]Gå til https://forum.libreelec.tv hvis du trenger ytterligere hjelp. Når du legger inn på forumet, er det koblingen til krasjloggen din som kan vises ved å klikke på krasjloggalternativet i Innstillinger > LibreELEC > System > Send logg."
 
 msgctxt "#32395"

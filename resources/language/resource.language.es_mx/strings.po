@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-12-14 06:26+0000\n"
@@ -1051,7 +1051,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** ¡MODO SEGURO! ** ¡MODO SEGURO! ** ¡MODO SEGURO! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "@DISTRONAME@ ha iniciado temporalmente en modo seguro debido a varios crasheos de Kodi repetidos.[CR][CR]Ahora puedes investigar la causa de los crasheos activando SSH o Samba.[CR][CR]Tu instalación de Kodi original puede ser accesada mediante \"/storage/.kodi.FAILED\" y el recurso Samba \"Kodi-Failed\".[CR][CR]Reiniciar retornará a tu instalación de Kodi original.[CR][CR]Abre https://forum.libreelec.tv si requieres mayor asistencia. Al publicar en el foro incluye el enlace a tu log de crasheo, el cual puede ser visto seleccionando la opción de log de crasheo en Configuración > LibreELEC > Sistema > Enviar log."
 
 msgctxt "#32395"

@@ -1,13 +1,13 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 # Translators:
 # Kiril <neohidra@gmail.com>, 2016,2018-2020
 # Namerp, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: LibreELEC Settings Add-on\n"
+"Project-Id-Version: EddictwareELEC Settings Add-on\n"
 "PO-Revision-Date: 2021-12-19 19:22+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Bulgarian <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/bg_bg/>\n"
@@ -1057,7 +1057,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** БЕЗОПАСЕН РЕЖИМ! ** БЕЗОПАСЕН РЕЖИМ! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "@DISTRONAME@ е стартирал временно в безопасен режим поради повтарящи се сривове на Kodi.[CR][CR]Mожете да проучите причината за сривовете, като включите ssh или Samba.[CR][CR]Инсталацията на Kodi е достъпна от \"/storage/.kodi.FAILED\" и Samba дяла \"Kodi-Failed\".[CR][CR]За да се върнете в стандартния режим на работа рестартиране Kodi.[CR][CR]Посетете https://forum.libreelec.tv, ако имате нужда от допълнителна помощ. Когато публикувате във форума, добавете връзка към журнала за сривове. Връзката можете да намерите в Настройки > LibreELEC > Система > Изпрати журнала."
 
 msgctxt "#32395"

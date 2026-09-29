@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2020-present Team LibreELEC (https://libreelec.tv)
 
-import xbmcaddon
-import xbmcgui
+import xbmcaddon # type: ignore[reportMissingImports]
+import xbmcgui # type: ignore[reportMissingImports]
 
 import log
 

@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 # Translators:
 # Antoine H <nin2jardin@gmail.com>, 2016,2018
 # Anton Voyl, 2018
@@ -16,7 +16,7 @@
 # Thibault <thibaultbruneliere@gmail.com>, 2020
 msgid ""
 msgstr ""
-"Project-Id-Version: LibreELEC Settings Add-on\n"
+"Project-Id-Version: EddictwareELEC Settings Add-on\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "PO-Revision-Date: 2025-12-07 12:13+0000\n"
 "Last-Translator: skypichat <skypichat@hotmail.fr>\n"
@@ -1065,7 +1065,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** MODE SANS ÉCHEC ! ** MODE SANS ÉCHEC ! ** MODE SANS ÉCHEC ! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "@DISTRONAME@ a démarré temporairement en mode sans échec en raison de plantages répétés de Kodi. [CR] [CR] Vous pouvez investiguer sur la cause des plantages en activant ssh ou Samba. [CR] [CR] Vous pouvez accéder à votre installation originale de Kodi via \"/storage/.kodi.FAILED\" et au partage \"Kodi-Failed\" de Samba. [CR] [CR] Le redémarrage réinitialisera l’installation d’origine de Kodi. [CR] [CR] sur https://forum.libreelec.tv si vous avez besoin d’aide supplémentaire. Lors de la publication sur le forum, incluez le lien vers votre journal des pannes qui peut être consulté en cliquant sur l'option Journal des pannes dans Paramètres> LibreELEC> Système> Envoyer journal."
 
 msgctxt "#32395"

@@ -266,7 +266,7 @@ class connmanService(object):
 
     @log.log_function()
     def __init__(self, servicePath, oeMain):
-        self.winOeCon = oeWindows.mainWindow('service-LibreELEC-Settings-mainWindow.xml', oe.__cwd__, 'Default', oeMain=oe, isChild=True)
+        self.winOeCon = oeWindows.mainWindow('service-EddictwareELEC-Settings-mainWindow.xml', oe.__cwd__, 'Default', oeMain=oe, isChild=True)
         self.servicePath = servicePath
         oe.dictModules['connmanNetworkConfig'] = self
         self.service_properties = dbus_connman.service_get_properties(servicePath)

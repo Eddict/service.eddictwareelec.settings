@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 # Translators:
 # Adrián Fülöp <adrian.fulop@t-email.hu>, 2016-2018
 # Csaba, 2019-2020
@@ -12,7 +12,7 @@
 # Szabolcs Siebenhofer <the7up@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: LibreELEC Settings Add-on\n"
+"Project-Id-Version: EddictwareELEC Settings Add-on\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "PO-Revision-Date: 2023-07-04 17:42+0000\n"
 "Last-Translator: dtech <dee.gabor@gmail.com>\n"
@@ -1061,7 +1061,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** CSÖKKENTETT MÓD! ** CSÖKKENTETT MÓD! ** CSÖKKENTETT MÓD! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "A(z) @DISTRONAME@ átmenetileg csökkentett módban indult el, a Kodi többszöri összeomlása után.[CR][CR]Kiderítheted az összeomlások okát, ha engedélyezed az SSH-t vagy a Samba-t.[CR][CR]Az eredeti Kodi telepítésed elérhető a \"/storage/.kodi.FAILED\" könyvtárban és a \"Kodi-Failed\" Samba megosztás alatt.[CR][CR]Újraindítás után a Kodi visszatér az eredeti telepítésedhez.[CR][CR]Látogass el a https://forum.libreelec.tv címre, ha további segítségre van szükséged. Amennyiben a fórumon bejegyzést teszel közzé, akkor abban helyezd el az összeomlási naplóra mutató linket, amit az összeomlási napló lehetőségre kattintva itt érhetsz el: Beállítások > LibreELEC > Rendszer > Napló feltöltése."
 
 msgctxt "#32395"

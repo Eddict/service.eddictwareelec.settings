@@ -5,8 +5,8 @@
 
 import socket
 
-import xbmc
-import xbmcaddon
+import xbmc # type: ignore[reportMissingImports]
+import xbmcaddon # type: ignore[reportMissingImports]
 
 
 __scriptid__ = 'service.eddictwareelec.settings'

@@ -1,12 +1,12 @@
 # Kodi Media Center language file
 # Addon Name: @DISTRONAME@ Configuration
-# Addon id: service.libreelec.settings
-# Addon Provider: LibreELEC
+# Addon id: service.eddictwareelec.settings
+# Addon Provider: EddictwareELEC
 # Translators:
 # Vlad Anisimov <uniss@ua.fm>, 2018,2020
 msgid ""
 msgstr ""
-"Project-Id-Version: LibreELEC Settings Add-on\n"
+"Project-Id-Version: EddictwareELEC Settings Add-on\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "PO-Revision-Date: 2025-10-31 07:29+0000\n"
 "Last-Translator: Pavlo Marianov <acid@jack.kyiv.ua>\n"
@@ -1055,7 +1055,7 @@ msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** БЕЗПЕЧНИЙ РЕЖИМ! ** БЕЗПЕЧНИЙ РЕЖИМ! ** БЕЗПЕЧНИЙ РЕЖИМ! **"
 
 msgctxt "#32394"
-msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > LibreELEC > System > Submit Log."
+msgid "@DISTRONAME@ has temporarily started in safe mode due to repeated Kodi crashes.[CR][CR]You may now investigate the cause of the crashes by enabling ssh or Samba.[CR][CR]Your original Kodi installation can be accessed via \"/storage/.kodi.FAILED\" and the Samba \"Kodi-Failed\" share.[CR][CR]Rebooting will return to your original Kodi installation.[CR][CR]Go to https://forum.libreelec.tv if you require further assistance. When posting to the forum include the link to your crash log which can be viewed by clicking the crash log option in Settings > EddictwareELEC > System > Submit Log."
 msgstr "@DISTRONAME@ тимчасово запущено в безпечному режимі через повторювані падіння Kodi.[CR][CR]Ви тепер можете дослідити причини збоїв, увімкнувши SSH або Samba.[CR][CR]До оригінальної інсталяції Kodi можна отримати доступ через теку \"/storage/.kodi.FAILED\" и мережевий ресурс Samba \"Kodi-Failed\".[CR][CR]Після перезавантаження буде відновлено оригінальну інсталяцію Kodi.[CR][CR]За додатковою допомогою звертайтесь на форум https://forum.libreelec.tv. Якщо будете писати повідомлення, додайте посилання на свій журнал збоїв, котрий можна переглянути в розділі Налаштування > LibreELEC > Система > Надіслати журнал."
 
 msgctxt "#32395"
