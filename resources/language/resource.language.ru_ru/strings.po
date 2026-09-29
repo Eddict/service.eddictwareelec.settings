@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LibreELEC Settings Add-on\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-01-14 08:13+0000\n"
+"PO-Revision-Date: 2025-10-01 06:29+0000\n"
 "Last-Translator: Alexey <signfinder@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/ru_ru/>\n"
 "Language: ru_ru\n"
@@ -21,7 +21,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 5.3\n"
+"X-Generator: Weblate 5.13.3\n"
+
+msgctxt "Addon Summary"
+msgid "@DISTRONAME@ Configuration"
+msgstr "Конфигурация @DISTRONAME@"
+
+msgctxt "Addon Description"
+msgid "Use this addon to manage @DISTRONAME@ services, updates, networking, bluetooth, backups, and other OS settings."
+msgstr "Данное дополнение предназначено для управления системными настройками @DISTRONAME@. С помощью удобного интерфейса Вы можете управлять настройками системы (включая низкоуровневые настройки ОС) через удобный интерфейс.[CR][CR]Здесь Вы также сможете изменить способ соединения с сетью, настроить раскладку клавиатуры, выбрать язык интерфейса, а также включить удаленный доступ по SSH и/или Samba."
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -97,7 +105,7 @@ msgstr "Настроить обновления"
 
 msgctxt "#709"
 msgid "Select the timezone for this device."
-msgstr ""
+msgstr "Выберите часовой пояс для этого устройства."
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
@@ -105,11 +113,11 @@ msgstr "Настройка имени хоста вашей системы @DIST
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
-msgstr "Настройка основной раскладки клавиатуры"
+msgstr "Настроить первую раскладку клавиатуры"
 
 msgctxt "#712"
 msgid "Configure the 2nd keyboard software layout"
-msgstr "Настройка дополнительной раскладки клавиатуры"
+msgstr "Настроить вторую раскладку клавиатуры"
 
 msgctxt "#713"
 msgid "Configure the physical keyboard type"
@@ -261,11 +269,11 @@ msgstr "Здесь можно указать папку, в которую бу�
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
-msgstr "Настройка основной раскладки клавиатуры"
+msgstr "Настроить первую раскладку клавиатуры"
 
 msgctxt "#754"
 msgid "Configure the 2nd keyboard software Variant"
-msgstr "Настройка дополнительной раскладки клавиатуры"
+msgstr "Настроить вторую раскладку клавиатуры"
 
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
@@ -277,7 +285,7 @@ msgstr "Отключить устаревшие SMB протоколы при у
 
 msgctxt "#757"
 msgid "Disable more recent SMB protocols for backward compatability with legacy clients."
-msgstr "Отключить более поздние протоколы SMB для обратной совместимости с устаревшими клиентами"
+msgstr "Отключить более новые протоколы SMB для обратной совместимости с устаревшими клиентами"
 
 msgctxt "#758"
 msgid "NetBIOS group to which the server belongs. Default is WORKGROUP."
@@ -357,15 +365,15 @@ msgstr "Показывать пользовательские каналы"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"
-msgstr "- Пользовательский канал 1"
+msgstr "  - Пользовательский канал 1"
 
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
-msgstr "- Пользовательский канал 2"
+msgstr "  - Пользовательский канал 2"
 
 msgctxt "#32019"
 msgid "  - Custom Channel 3"
-msgstr "- Пользовательский канал 3"
+msgstr "  - Пользовательский канал 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
@@ -769,7 +777,7 @@ msgstr "Некорректный PIN!"
 
 msgctxt "#32235"
 msgid " attempts remaining."
-msgstr "осталось попыток."
+msgstr " осталось попыток."
 
 msgctxt "#32236"
 msgid "You have entered an incorrect PIN too many times.[CR][CR]You will need to wait 5 minutes before trying again."
@@ -981,7 +989,7 @@ msgstr "Восстановить из резервной копии"
 
 msgctxt "#32374"
 msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.gz, .tar.bz2, or .tar.xz"
-msgstr ""
+msgstr "Ошибка: Недопустимый файл резервной копии. Имя файла должно заканчиваться на: .tar, .tar.gz, .tar.bz2 или .tar.xz"
 
 msgctxt "#32375"
 msgid "Backup Progress"
@@ -1021,7 +1029,7 @@ msgstr "Воспроизвести файлы?"
 
 msgctxt "#32384"
 msgid "OBEX Enabled"
-msgstr "OBEX Вкл."
+msgstr "OBEX Включен"
 
 msgctxt "#32385"
 msgid "OBEX Upload Folder"
@@ -1117,16 +1125,16 @@ msgstr "Перезагрузите для применения изменени�
 
 msgctxt "#32417"
 msgid "Sending..."
-msgstr ""
+msgstr "Отправка..."
 
 msgctxt "#32418"
 msgid "Log files sent to:"
-msgstr ""
+msgstr "Файлы журналов, отправленные на:"
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
-msgstr ""
+msgstr "Ошибка при отправке файлов журнала. Попробуйте еще раз."
 
 msgctxt "#32420"
 msgid "Timezone"
-msgstr ""
+msgstr "Часовой пояс"

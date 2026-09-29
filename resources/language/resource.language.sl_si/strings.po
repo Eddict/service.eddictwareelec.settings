@@ -4,10 +4,24 @@
 # Addon Provider: LibreELEC
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2024-05-13 06:05+0000\n"
+"Last-Translator: Simon <dolenec@gmail.com>\n"
+"Language-Team: Slovenian <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/sl_si/>\n"
 "Language: sl_si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.5.4\n"
+
+msgctxt "Addon Summary"
+msgid "@DISTRONAME@ Configuration"
+msgstr "Prilagoditev @DISTRONAME@"
+
+msgctxt "Addon Description"
+msgid "Use this addon to manage @DISTRONAME@ services, updates, networking, bluetooth, backups, and other OS settings."
+msgstr "S tem dodatkom upravljate operacijski sistem, ki deluje pod pokrovom sistema @DISTRONAME@. Odtod lahko upravljate s celotnim sistemom, tako da je skrb o tem, kar teče pod pokrovom, odveč.[CR][CR]Odtod lahko spremenite svojo omrežno povezljivost, postavitev tipkovnice in jezik ter omogočite/onemogočite oddaljeni dostop, vključno s Sambo in SSH."
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -943,7 +957,7 @@ msgstr ""
 
 msgctxt "#32369"
 msgid "Wait for network before starting Kodi"
-msgstr ""
+msgstr "Počakajte na omrežje, preden zaženete Kodi"
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"

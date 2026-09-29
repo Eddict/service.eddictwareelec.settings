@@ -759,6 +759,26 @@
                             <visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible>
                             <texture>bt-audio-card.png</texture>
                         </control>
+                        <!-- audio-headphones -->
+                        <control type="image">
+                            <left>40</left>
+                            <top>25</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), audio-headphones)</visible>
+                            <texture>bt-audio-headphones.png</texture>
+                        </control>
+                        <!-- audio-headset -->
+                        <control type="image">
+                            <left>40</left>
+                            <top>25</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), audio-headset)</visible>
+                            <texture>bt-audio-headset.png</texture>
+                        </control>
                         <!-- Camera Photo -->
                         <control type="image">
                             <left>40</left>
@@ -852,7 +872,7 @@
                         <!-- Connection Name -->
                         <control type="label">
                             <left>140</left>
-                            <top>10</top>
+                            <top>25</top>
                             <width>490</width>
                             <height>30</height>
                             <font>font24_title</font>
@@ -863,7 +883,7 @@
                         <!-- Connection Address -->
                         <control type="label">
                             <left>650</left>
-                            <top>49</top>
+                            <top>48</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -873,7 +893,7 @@
                         <!-- Connected State -->
                         <control type="label">
                             <left>650</left>
-                            <top>20</top>
+                            <top>19</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -897,8 +917,22 @@
                             <width>20</width>
                             <height>20</height>
                             <aspectratio>keep</aspectratio>
-                            <visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible>
+                            <visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible>
                             <texture>key.png</texture>
+                        </control>
+                        <!-- Signal strength -->
+                        <control type="progress">
+                            <left>10</left>
+                            <top>80</top>
+                            <width>1236</width>
+                            <height>3</height>
+                            <info>ListItem.Property(Strength)</info>
+                            <visible>Integer.IsGreater(ListItem.Property(Strength), 0)</visible>
+                            <texturebg />
+                            <lefttexture />
+                            <righttexture />
+                            <overlaytexture />
+                            <midtexture colordiffuse="FF12B2E7" border="2">separator-grey.png</midtexture>
                         </control>
                     </itemlayout>
                     <focusedlayout height="100">
@@ -943,6 +977,26 @@
                             <visible>String.IsEqual(ListItem.Property(Icon), audio-card)</visible>
                             <texture>bt-audio-card.png</texture>
                         </control>
+                        <!-- audio-headphones -->
+                        <control type="image">
+                            <left>40</left>
+                            <top>25</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), audio-headphones)</visible>
+                            <texture>bt-audio-headphones.png</texture>
+                        </control>
+                        <!-- audio-headset -->
+                        <control type="image">
+                            <left>40</left>
+                            <top>25</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(Icon), audio-headset)</visible>
+                            <texture>bt-audio-headset.png</texture>
+                        </control>
                         <!-- Camera Photo -->
                         <control type="image">
                             <left>40</left>
@@ -1036,7 +1090,7 @@
                         <!-- Connection Name -->
                         <control type="label">
                             <left>140</left>
-                            <top>10</top>
+                            <top>25</top>
                             <width>490</width>
                             <height>30</height>
                             <font>font24_title</font>
@@ -1047,7 +1101,7 @@
                         <!-- Connection Address -->
                         <control type="label">
                             <left>650</left>
-                            <top>49</top>
+                            <top>48</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -1057,7 +1111,7 @@
                         <!-- Connected State -->
                         <control type="label">
                             <left>650</left>
-                            <top>20</top>
+                            <top>19</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -1081,9 +1135,23 @@
                             <width>20</width>
                             <height>20</height>
                             <aspectratio>keep</aspectratio>
-                            <visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible>
+                            <visible>Integer.IsGreater(ListItem.Property(Trusted), 0)</visible>
                             <texture>key.png</texture>
                         </control>
+                        <!-- Signal strength -->
+                        <control type="progress">
+                            <left>10</left>
+                            <top>80</top>
+                            <width>1236</width>
+                            <height>3</height>
+                            <info>ListItem.Property(Strength)</info>
+                            <visible>Integer.IsGreater(ListItem.Property(Strength), 0)</visible>
+                            <texturebg />
+                            <lefttexture />
+                            <righttexture />
+                            <overlaytexture />
+                            <midtexture colordiffuse="FF12B2E7" border="2">separator-grey.png</midtexture>
+                        </control> 
                     </focusedlayout>
                 </control>
             </control>

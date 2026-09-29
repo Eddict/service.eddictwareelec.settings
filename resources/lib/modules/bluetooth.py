@@ -235,7 +235,8 @@ class bluetooth(modules.Module):
     def disconnect_device_by_path(self, path):
         try:
             dbus_bluez.device_disconnect(path)
-            self.menu_connections()
+            if self.visible:
+                self.menu_connections()
         except DBusError as e:
             self.dbus_error_handler(e)
 
@@ -281,6 +282,18 @@ class bluetooth(modules.Module):
             self.start_discovery()
             self.discovery_thread = discoveryThread(self)
             self.discovery_thread.start()
+
+    @log.log_function()
+    def rssi_to_percentage(self, rssi):
+        min_rssi = -100  # Worst possible signal
+        max_rssi = -30    # Best possible signal
+        if rssi <= min_rssi:
+            return 0
+        elif rssi >= max_rssi:
+            return 100
+        ratio = (rssi - min_rssi) / (max_rssi - min_rssi)
+
+        return round((ratio ** 1.8) * 100)
 
     @log.log_function()
     def discover_devices(self):
@@ -332,14 +345,15 @@ class bluetooth(modules.Module):
             selected_dbus_device = selected_item.getProperty('entry')
         for dbusDevice, device_properties in self.dbusDevices.items():
             dictProperties = {}
-            apName = ''
+            apName = device_properties.get('Name') or device_properties.get('Alias', '')
             dictProperties['entry'] = dbusDevice
             dictProperties['modul'] = self.__class__.__name__
             dictProperties['action'] = 'open_context_menu'
-            if 'Name' in device_properties:
-                apName = device_properties['Name']
             if not 'Icon' in device_properties:
                 dictProperties['Icon'] = 'default'
+            if 'RSSI' in device_properties:
+                rssi = int(device_properties['RSSI'])
+                dictProperties['Strength'] = str(self.rssi_to_percentage(rssi))
             for prop in self.properties:
                 name = self.properties[prop]['value']
                 if name in device_properties:
@@ -474,8 +488,13 @@ class bluetooth(modules.Module):
             devices = oe.read_setting('bluetooth', 'standby')
             if devices:
                 for device in devices.split(','):
-                    if dbus_bluez.device_get_connected(device):
-                        self.disconnect_device_by_path(device)
+                    try:
+                        if dbus_bluez.device_get_connected(device):
+                            self.disconnect_device_by_path(device)
+                    except DBusError:
+                        # bluez no longer knows this device, so there is nothing
+                        # to disconnect - carry on so the rest of the list is done
+                        log.log(f'standby_devices: skipping unknown {device}', log.DEBUG)
 
 
 ####################################################################
@@ -487,6 +506,18 @@ class Bluez_Listener(dbus_bluez.Listener):
     def __init__(self, parent):
         self.parent = weakref.proxy(parent)
         super().__init__()
+
+    @log.log_function()
+    def rssi_to_percentage(self, rssi):
+        min_rssi = -100  # Worst possible signal
+        max_rssi = -30    # Best possible signal
+        if rssi <= min_rssi:
+            return 0
+        elif rssi >= max_rssi:
+            return 100
+        ratio = (rssi - min_rssi) / (max_rssi - min_rssi)
+
+        return round((ratio ** 1.8) * 100)
 
     @log.log_function()
     def on_interfaces_added(self, path, interfaces):
@@ -522,6 +553,9 @@ class Bluez_Listener(dbus_bluez.Listener):
                 for prop in changed:
                     if prop in properties:
                         self.parent.listItems[path].setProperty(str(prop), str(changed[prop]))
+                if 'RSSI' in changed:
+                    rssi = int(changed['RSSI'])
+                    self.parent.listItems[path].setProperty('Strength', str(self.rssi_to_percentage(rssi)))
             else:
                 self.parent.discover_devices()
 
@@ -663,7 +697,7 @@ class Obex_Agent(dbus_obex.Agent):
 
     def authorize_push(self, transfer):
         xbmcDialog = xbmcgui.Dialog()
-        properties = self.transfer_get_all_properties(transfer)
+        properties = dbus_obex.transfer_get_all_properties(transfer)
         answer = xbmcDialog.yesno('Bluetooth', f"{oe._(32381)}\n\n{properties['Name']}")
         log.log(f'answer={repr(answer)}', log.DEBUG)
         if answer != 1:
