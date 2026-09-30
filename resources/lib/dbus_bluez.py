@@ -36,8 +36,8 @@ class Agent(dbus_utils.Agent):
         out_signature='',
         arg_keys=['device', 'uuid']
     )
-    def AuthorizeService(self, device, uuid):
-        self.authorize_service(device, uuid)
+    async def AuthorizeService(self, device, uuid):
+        await dbus_utils.run_dialog(self.authorize_service, device, uuid)
 
     @ravel.method(
         in_signature='',
@@ -45,6 +45,9 @@ class Agent(dbus_utils.Agent):
     )
     def Cancel(self):
         self.cancel()
+
+    def cancel(self):
+        pass
 
     @ravel.method(
         in_signature='ouq',
@@ -82,8 +85,8 @@ class Agent(dbus_utils.Agent):
         out_signature='',
         arg_keys=['device', 'passkey']
     )
-    def RequestConfirmation(self, device, passkey):
-        self.request_confirmation(device, passkey)
+    async def RequestConfirmation(self, device, passkey):
+        await dbus_utils.run_dialog(self.request_confirmation, device, passkey)
 
     @ravel.method(
         in_signature='o',
@@ -91,9 +94,8 @@ class Agent(dbus_utils.Agent):
         arg_keys=['device'],
         result_keyword='reply'
     )
-    def RequestPasskey(self, device, reply):
-        passkey = self.request_passkey(device)
-        reply[0] = passkey
+    async def RequestPasskey(self, device, reply):
+        reply[0] = await dbus_utils.run_dialog(self.request_passkey, device)
 
     @ravel.method(
         in_signature='o',
@@ -101,12 +103,11 @@ class Agent(dbus_utils.Agent):
         arg_keys=['device'],
         result_keyword='reply'
     )
-    def RequestPinCode(self, device, reply):
-        pincode = self.request_pincode(device)
-        reply[0] = pincode
+    async def RequestPinCode(self, device, reply):
+        reply[0] = await dbus_utils.run_dialog(self.request_pincode, device)
 
     def reject(self, message):
-        raise dbussy.DBusError(ERROR_REJECTED, message)
+        raise ravel.ErrorReturn(ERROR_REJECTED, message)
 
 class Listener(object):
 

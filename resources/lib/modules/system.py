@@ -564,9 +564,9 @@ class system(modules.Module):
                 self.backup_dlg.create('EddictwareELEC', oe._(32375))
                 if not os.path.exists(self.BACKUP_DESTINATION):
                     os.makedirs(self.BACKUP_DESTINATION)
-                self.backup_file = f'{hostname.get_hostname()}-{oe.timestamp()}.tar'
+                self.backup_file = f'{hostname.get_hostname()}-{oe.timestamp()}.tar.zst'
                 log.log(f'Backup file: {bckDir + self.backup_file}', log.INFO)
-                tar = tarfile.open(bckDir + self.backup_file, 'w', format=tarfile.GNU_FORMAT)
+                tar = tarfile.open(bckDir + self.backup_file, mode='w:zst', level=3, format=tarfile.GNU_FORMAT)
                 for directory in self.BACKUP_DIRS:
                     self.tar_add_folder(tar, directory)
                     if self.backup_dlg is None or self.backup_dlg.iscanceled():
@@ -602,7 +602,7 @@ class system(modules.Module):
             if not os.path.isfile(restore_file_path):
                 return
             # file selected that won't trigger busybox's backup restoration
-            if not restore_file_path.endswith(('.tar', '.tar.gz', '.tar.bz2', '.tar.xz')):
+            if not restore_file_path.endswith(('.tar', '.tar.bz2', '.tar.gz', '.tar.xz', '.tar.zst')):
                 log.log(f'Error: Invalid backup file: {restore_file_path}', log.ERROR)
                 xbmcDialog.ok(oe._(32373), oe._(32374))
                 return

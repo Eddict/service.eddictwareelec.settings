@@ -66,8 +66,14 @@ class Agent(dbus_utils.Agent):
         out_signature='',
         arg_keys=['service', 'url']
     )
-    def RequestBrowser(self, path, url):
-        raise NotImplementedError
+    def RequestBrowser(self, service, url):
+        self.request_browser(service, url)
+
+    # ravel binds the decorated method when the class is decorated, so the
+    # handler has to delegate for a subclass override to be reached
+    def request_browser(self, service, url):
+        raise ravel.ErrorReturn(
+            ERROR_AGENT_CANCELLED, 'Browser login is not supported')
 
     @ravel.method(
         in_signature='oa{sv}',
@@ -77,7 +83,7 @@ class Agent(dbus_utils.Agent):
     )
     async def RequestInput(self, request, reply):
         request = dbus_utils.convert_from_dbussy(request)
-        input = self.request_input(*request)
+        input = await dbus_utils.run_dialog(self.request_input, *request)
         input = {k: (dbussy.DBUS.Signature('s'), v)
                  for (k, v) in input.items()}
         reply[0] = input
