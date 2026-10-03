@@ -18,7 +18,7 @@ jobs:
         sha256=$(curl -L "https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz" | sha256sum)
         echo "SHA256: $sha256" | tee -a $GITHUB_STEP_SUMMARY
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: Create and Zip addon
       run: make addon
