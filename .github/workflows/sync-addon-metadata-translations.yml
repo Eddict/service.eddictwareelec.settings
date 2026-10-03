@@ -15,12 +15,12 @@ jobs:
     steps:
 
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v7
         with:
           path: project
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v7
         with:
           python-version: '3.9'
 
@@ -35,7 +35,7 @@ jobs:
         working-directory: ./project
 
       - name: Create PR for sync-addon-metadata-translations changes
-        uses: peter-evans/create-pull-request@v3.10.0
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: Sync of addon metadata translations
           title: Sync of addon metadata translations

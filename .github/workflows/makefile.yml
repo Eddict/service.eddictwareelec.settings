@@ -5,6 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Calculate SHA256 of commit
+      run: |
+        sha256=$(curl -L "https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz" | sha256sum)
+        echo "SHA256: $sha256" | tee -a $GITHUB_STEP_SUMMARY
+
     - uses: actions/checkout@v4
 
     - name: Create and Zip addon
@@ -19,7 +25,7 @@ jobs:
 
     - name: Upload Zip file
       # if: steps.image-path.outputs.EE_image_pathfilename != ''
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: "service.eddictwareelec.settings"
         path: "build/service.eddictwareelec.settings-0.0.0.zip"
