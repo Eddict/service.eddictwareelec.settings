@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Calculate SHA256 of commit
       run: |
-        PKG_SHA256=$(curl -L "https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz" | sha256sum)
+        PKG_SHA256=$(curl -L "https://github.com/${{ github.repository }}/archive/${{ github.sha }}.tar.gz" | sha256sum | awk '{print $1}')
         echo "PKG_VERSION: ${{ github.sha }}" | tee -a $GITHUB_STEP_SUMMARY
         echo "PKG_SHA256: $PKG_SHA256" | tee -a $GITHUB_STEP_SUMMARY
 
