@@ -6,7 +6,7 @@
 ADDON_NAME := service.eddictwareelec.settings
 ADDON_VERSION := 0.0.0
 DISTRONAME := EddictwareELEC
-ROOT_PASSWORD := libreelec
+ROOT_PASSWORD := eddictwareelec
 
 SHELL := /bin/bash
 BUILDDIR := build

@@ -425,7 +425,7 @@ class connman(modules.Module):
                 'TetheringIdentifier': {
                     'order': 3,
                     'name': 32198,
-                    'value': 'LibreELEC-AP',
+                    'value': 'EddictwareELEC-AP',
                     'action': 'set_technologie',
                     'type': 'text',
                     'parent': {

@@ -654,7 +654,7 @@ def write_setting(module, setting, value, main_node='settings'):
 
 @log.log_function()
 def load_modules():
-    # # load libreelec configuration modules
+    # # load eddictwareelec configuration modules
     global dictModules, __oe__, __cwd__, init_done
     for strModule in dictModules:
         dictModules[strModule] = None
